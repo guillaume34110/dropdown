@@ -1,4 +1,4 @@
-export const states = [
+ const states = [
     {
         "name": "Alabama",
         "abbreviation": "AL"
@@ -236,3 +236,11 @@ export const states = [
         "abbreviation": "WY"
     }
 ];
+export const newArray = () => {
+    const result = []
+    states.forEach(state =>{
+        result.push(state.name)
+    })
+    
+    return result
+}

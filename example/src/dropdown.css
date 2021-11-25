@@ -2,56 +2,60 @@ html{
     min-height: 100vh ;
     width: 100vw;
 }
-ul{
-    transition:all 1s;
+li{
+    list-style: none;
+    cursor:default;
+    line-height:150%;
+    cursor: pointer;
 }
-
-.dropdowns {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 250px;
-    margin-top: 5vh;
-    transition:all 1s;
-  }
+ul{
+    margin : 0;
+    padding : 0;
+}
+li:hover{
+    background-color:rgb(100, 100, 255);
+}
   .dropdown {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 38vw;
-    max-width: 620px; ;
-    min-width: 300px;
-    transition:all 1s;
+    min-width: 200px;
+    max-width: 300px;
+    transition:all 0.5s;
   }
   .dropdown-header {
-    background: red;
-    color: white;
+    background: rgb(201, 201, 201);
+    color: black;
     height: 47px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 20px 0 10px;
     border-radius: 10px;
     z-index: 11;
     transition:all 1s;
     
   }
   .dropdown-header img {
+    filter: invert(100%);/*invert png color*/
       cursor: pointer;
-      transition:  1s ease-in-out;
+      transition:  0.5s ease-in-out;
       transform: rotate(180deg);
+      height: 10px ;
+      width: 14px;
     }
   
   .dropdown-content {
-    width: -webkit-fill-available;
+    width: 96%;
     position: relative;
-    top: -5px;
+    top: -7px;
     z-index: -1;
-    background: gray;
+    background: rgb(255, 255, 255);
     border-radius: 0px 0px 10px 10px;
+    border: solid 1px rgb(201, 201, 201);
     transition: 1s linear;
     height: fit-content ;
-    padding: 5px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
     margin-bottom: 30px;
     overflow: hidden;
      line-height: 142.6%;
@@ -61,9 +65,10 @@ ul{
   
     padding: 0 5px ;
     transition: all 1s ;
-    animation: slidein 1s linear forwards;
+    animation: slidein 0.5s linear forwards;
 
   }
+
  
   .dropdown-content-list ,.dropdown-content-paragraph{
   height:fit-content;
@@ -76,7 +81,11 @@ ul{
   }.dropdown-content-list::-webkit-scrollbar , .dropdown-content-paragraph::-webkit-scrollbar {
       display: none;
     }
-
+    .initial{
+        display: none;
+        opacity: 0;
+        transition: 0 all;
+    }
     @keyframes slidein {
  
         to {

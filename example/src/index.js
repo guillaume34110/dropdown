@@ -3,6 +3,9 @@ import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Dropdown from './Dropdown'
-import { states } from './data'
+import { newArray } from './data'
+import App from './App'
 
-ReactDOM.render(<Dropdown array = {states}/>, document.getElementById('root'))
+ReactDOM.render(
+<App/>, document.getElementById('root')
+)
