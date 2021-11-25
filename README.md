@@ -11,18 +11,23 @@ npm install --save dropdown
 ```
 
 ## Usage
-
+To use this component you need an array of string named array and a "useState" to set and handle the new value of the dropdown
 ```jsx
-import React, { Component } from 'react'
+import React,{useState}from 'react'
 
-import MyComponent from 'dropdown'
+import DropDown from 'dropdown'
 import 'dropdown/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const myComponent{
+    
+    const array = []
+    const [currentSelection ,setCurrentSelection] = useState(array[0])
+  
+    return (
+    <Dropdown array = {array} currentSelection = {currentSelection} setCurrentSelection = {setCurrentSelection}/>
+    )
 }
+
 ```
 
 ## License

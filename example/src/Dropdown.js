@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import './dropdown.css'
 import arrow from './assets/arrow.png'
+import PropTypes from "prop-types";
 
 const Dropdown = ({ array, currentSelection ,setCurrentSelection }) => {
  //const [data,setData] = useState(array)
@@ -42,3 +43,9 @@ const Dropdown = ({ array, currentSelection ,setCurrentSelection }) => {
 }
 
 export default Dropdown
+
+Dropdown.propTypes = {
+  array : PropTypes.array,
+  currentSelection:  PropTypes.string ,
+  setCurrentSelection : PropTypes.func
+}
