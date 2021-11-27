@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save dropdown
+npm install --save gaillardguillaumedropdown-menu
 ```
 
 ## Usage

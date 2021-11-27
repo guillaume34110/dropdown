@@ -1,6 +1,6 @@
 {
-  "name": "gaillardguillaumedropdown-menu",
-  "version": "1.0.1",
+  "name": "gg-dropdown-menu",
+  "version": "1.0.4",
   "description": "dropdown component",
   "author": "guillaume34110",
   "license": "MIT",
@@ -51,6 +51,9 @@
     "dist"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "prop-types": "^15.7.2"
   }
 }
