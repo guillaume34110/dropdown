@@ -9,16 +9,18 @@ const Dropdown = ({ array, currentSelection ,setCurrentSelection }) => {
   const dropContentRef = useRef()
   const iconRef = useRef()
   const listRef = useRef()
+  const dropHeaderRef = useRef()
 const  toggleDropDownKey = (e) => {
   console.log(e.keyCode)
   if (e.keyCode === 13)toggleDropDown()
 }
-  const toggleDropDown = () => {
+  const toggleDropDown = async() => {
     let contentHeight 
     console.log(listRef.current)
 console.log('toggle')
     if ( dropContentRef.current.classList.contains('collapse')) {
       dropContentRef.current.classList.remove('collapse')
+      dropHeaderRef.current.classList.add('index-11')
       dropContentRef.current.classList.remove('initial')   // remove initial state
       dropContentRef.current.style.height = "fit-content" // natural height
       contentHeight = dropContentRef.current.clientHeight // natural height in px
@@ -34,9 +36,12 @@ console.log('toggle')
       if (contentHeight > 300) contentHeight = 300
       dropContentRef.current.style.height = `${contentHeight}px`
       dropContentRef.current.classList.add('collapse')
+     
       for (let i = 0 ; i<listRef.current.children.length ; i++){//keyBoard Nav
         listRef.current.children[i].tabIndex = -1
      }
+     await sleep(1000)
+      dropHeaderRef.current.classList.remove('index-11')
     }
   }
   const selectItemKey = (e) => {
@@ -48,9 +53,12 @@ console.log('toggle')
     
     iconRef.current.focus()
   }
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
   return (
     <div className="dropdown" >
-      <div  role="listbox" className="dropdown-header dropdown-header-list">
+      <div ref = {dropHeaderRef} role="listbox" className="dropdown-header dropdown-header-list">
         <p>{currentSelection}</p>
         <div ref = {iconRef} onClick={toggleDropDown} onKeyDown={toggleDropDownKey}  tabIndex="0">
         <FontAwesomeIcon aria-hidden = "false" className="icon" icon={faSortDown}   /> 

@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save gaillardguillaumedropdown-menu
+npm i gg-dropdown-menu
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ To use this component you need an array of string named array and a "useState" t
 ```jsx
 import React,{useState}from 'react'
 
-import DropDown from 'dropdown'
-import 'dropdown/dist/index.css'
+import Dropdown from 'gg-dropdown-menu/dist/index.js'
+import 'gg-dropdown-menu/dist-unmignified/dropdown.css'
 
 const myComponent{
     

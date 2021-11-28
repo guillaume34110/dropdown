@@ -32,7 +32,6 @@ li:hover , li:focus-visible{
   justify-content: space-between;
   padding: 0 20px 0 10px;
   border-radius: 10px;
-  z-index: 11;
   transition:all 1s;
   border: solid 1px rgb(201, 201, 201);
   
@@ -90,7 +89,9 @@ li:hover , li:focus-visible{
   opacity: 0;
   transition: 0 all;
 }
-
+.index-11{
+  z-index: 11;
+}
   @keyframes slidein {
 
       to {
