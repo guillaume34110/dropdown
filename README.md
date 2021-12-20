@@ -31,6 +31,8 @@ const myComponent{
 
 ```
 
+if you want restyle this component use this css file.
+
 ## License
 
 MIT © [guillaume34110](https://github.com/guillaume34110)
